@@ -1,0 +1,945 @@
+/* General Styles */
+body {
+    margin: 0; /* Remove default body margin */
+    padding: 0; /* Remove default body padding */
+  
+  
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  background-color: #f5f7fa; /* Light background for the entire site */
+  color: #333; /* Dark text color for readability */
+}
+
+/* Make images responsive */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+h1, h2, h3, h4 {
+  color: #007bff; /* Consistent heading color */
+}
+
+a {
+  color: #007bff; /* Link color */
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline; /* Underline effect on hover */
+}
+
+/* Home Section */
+.home-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(to right, #9cb6d1, #80bccd); /* Gradient background */
+  animation: fadeIn 1s ease-in; /* Fade-in effect for the entire section */
+}
+
+.home-container {
+  display: flex;
+  width: 80%;
+  max-width: 1200px;
+  box-shadow: 0 4px 40px rgba(0, 0, 0, 0.2); /* Stronger shadow for a professional look */
+  border-radius: 15px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.home-container:hover {
+  transform: translateY(-5px); /* Subtle lift effect on hover */
+}
+
+.image-container {
+  flex: 1; /* Allow the image container to grow */
+  overflow: hidden; /* Hide any overflow */
+}
+
+.home-image {
+  width: 100%; /* Make the image fill the container */
+  height: auto; /* Maintain aspect ratio */
+  object-fit: cover; /* Ensure the image covers the container */
+  transition: transform 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.image-container:hover .home-image {
+  transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+
+.search-box {
+  flex: 1;
+  padding: 40px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  animation: slideIn 0.8s ease-in-out; /* Slide-in animation for the search box */
+}
+
+.animated-title {
+  color: #092b4f; /* Title color */
+  font-size: 2.5rem; /* Increased font size for better visibility */
+  margin: 0;
+  animation: fadeInRight 1s ease; /* Title animation */
+}
+
+.animated-description {
+  color: #555; /* Subtle description color */
+  font-size: 1.2rem; /* Adjusted font size */
+  margin: 10px 0 30px; /* Margin for spacing */
+  animation: fadeInUp 1s ease; /* Description animation */
+}
+
+.input-group {
+  margin-bottom: 20px; /* Space between input groups */
+}
+
+input[type="text"],
+textarea {
+  width: 100%; /* Full width */
+  padding: 10px; /* Padding inside the textarea */
+  border: 2px solid #ccc; /* Default border color */
+  border-radius: 5px; /* Rounded corners */
+  font-size: 16px; /* Font size */
+  transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+}
+
+input[type="text"]:focus,
+textarea:focus {
+  border-color: #007bff; /* Change border color on focus */
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Add a shadow effect */
+  outline: none; /* Remove default outline */
+}
+
+textarea {
+  resize: none; /* Disable resizing */
+  height: 80px; /* Set a fixed height */
+}
+
+
+.search-button {
+  padding: 15px;
+  background-color: #7780e5;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.search-button:hover {
+  background-color: #a091dd;
+  transform: translateY(-2px);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(-50%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+  .home-container {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .image-container, .search-box {
+    width: 100%;
+  }
+}
+
+
+/* Jobs Section */
+/* Define keyframes for fade-in and slide-in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0; /* Start invisible */
+    transform: translateY(20px); /* Start below */
+  }
+  to {
+    opacity: 1; /* End fully visible */
+    transform: translateY(0); /* End at original position */
+  }
+}
+
+/* Jobs Section with animation on page load */
+.jobs-section {
+  padding: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+  background: linear-gradient(135deg, #9cb6d1, #80bccd);
+  border-radius: 10px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 1s ease forwards; /* Apply animation */
+  transition: transform 0.5s ease, box-shadow 0.5s ease, opacity 0.5s ease;
+}
+
+/* Add hover effect for additional interaction */
+.jobs-section:hover {
+  transform: translateY(-10px); /* Slight lift on hover */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); /* Enhance shadow on hover */
+  opacity: 0.95; /* Slight fade effect on hover */
+}
+.jobs-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columns layout */
+  gap: 20px;
+}
+
+/* Headings */
+h2, h3 {
+  color: #2c3e50;
+  margin-bottom: 20px;
+  text-align: center; /* Centered headings */
+  font-family: 'Roboto', sans-serif; /* Modern font */
+  font-weight: bold;
+}
+/* Enhanced Work Mode Container */
+.work-mode-container {
+  
+  justify-content: center; /* Center the buttons horizontally */
+  gap: 20px; /* Space between the buttons */
+  background-color: #c9e7ec; /* Light background color */
+  padding: 20px 40px; /* Padding inside the container */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Soft shadow for the container */
+  margin-bottom: 30px; /* Space below the container */
+  text-align: center; /* Center the text */
+}
+
+/* Work Mode Buttons */
+/* Work Mode Checkbox Container */
+.work-mode-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  justify-content: center;
+  background-color: #f0f8fa; /* Light background for contrast */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Styling for individual checkboxes */
+.work-mode-container label {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  color: #2c3e50;
+  cursor: pointer;
+}
+
+.work-mode-container input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  cursor: pointer;
+  accent-color: #3498db; /* Custom color for the checkbox */
+  border-radius: 3px; /* Rounded edges for the checkbox */
+  transition: transform 0.2s ease;
+}
+
+.work-mode-container input[type="checkbox"]:hover {
+  transform: scale(1.1); /* Slight enlargement on hover */
+}
+
+/* Adjust spacing between checkboxes */
+.work-mode-container .checkbox-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+
+/* Search Container */
+.search-container {
+  display:flex;
+  padding: 10px;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  margin: 5px;
+}
+
+/* Search Input */
+.search-container input {
+  padding: 12px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  width: 70%;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.search-container input:focus {
+  border-color: #3498db;
+  box-shadow: 0 0 8px rgba(52, 152, 219, 0.4); /* Glowing effect on focus */
+}
+
+/* Search Button */
+.search-container button {
+  padding: 12px 20px;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, box-shadow 0.3s ease;
+
+
+}
+
+.search-container button:hover {
+  background-color: #2980b9;
+  box-shadow: 0 5px 15px rgba(41, 128, 185, 0.4); /* Hover shadow effect */
+}
+
+/* Work Mode Container */
+.work-mode-container {
+  margin-bottom: 30px;
+}
+
+/* Job Card Styles */
+.featured-jobs {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+/* Individual Job Card */
+.job-card {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.job-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.job-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 300%;
+  height: 100%;
+  background: rgba(41, 128, 185, 0.1);
+  transform: skewX(-30deg);
+  transition: left 0.5s ease;
+}
+
+.job-card:hover::before {
+  left: 100%;
+}
+
+/* Job Type Styling */
+.job-type {
+  color: #7f8c8d;
+  font-weight: 400;
+}
+
+/* Easy Apply Button */
+.easy-apply-button {
+  padding: 10px 15px;
+  background-color: #2ecc71;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.easy-apply-button:hover {
+  background-color: #1aca63;
+  transform: translateY(-3px); /* Slight lift on hover */
+  box-shadow: 0 4px 15px rgba(26, 202, 99, 0.3); /* Hover shadow effect */
+}
+@media (max-width: 1024px) {
+  .jobs-container {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns for medium screens */
+  }
+}
+
+/* Media Query for mobile screens */
+@media (max-width: 600px) {
+  .jobs-container {
+    grid-template-columns: 1fr; /* 1 column layout for small screens */
+  }
+}
+/* Services Section */
+.services-section {
+  padding: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+  background: linear-gradient(135deg, #9cb6d1, #80bccd);
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  animation: fadeIn 0.5s forwards ease-in-out;
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .search-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .search-container input {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .jobs-section {
+    padding: 20px;
+  }
+
+  .job-card {
+    padding: 15px;
+  }
+}
+
+
+
+/* Services Section */
+.services-section {
+  padding: 40px; /* Padding around the content */
+  max-width: 1200px; /* Maximum width for the section */
+  margin: 0 auto; /* Center the section */
+  background: linear-gradient(to right, #9cb6d1, #80bccd); /* Light gradient background */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Soft shadow */
+  opacity: 0; /* Start hidden for fade-in animation */
+  animation: fadeIn 0.5s forwards; /* Fade-in animation on load */
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+  to {
+    opacity: 1; /* Final opacity */
+  }
+}
+
+/* Headings */
+h2 {
+  color: #2c3e50; /* Dark color for headings */
+  margin-bottom: 30px; /* Space below heading */
+  text-align: center; /* Center align heading */
+}
+
+/* Service Container */
+/* Services Section */
+.services-section {
+  padding: 40px; /* Padding around the content */
+  max-width: 1200px; /* Maximum width for the section */
+  margin: 0 auto; /* Center the section */
+  background: linear-gradient(to right, #9cb6d1, #80bccd); /* Light gradient background */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Soft shadow */
+  opacity: 0; /* Start hidden for fade-in animation */
+  animation: fadeIn 0.5s forwards, slideIn 0.5s forwards; /* Fade-in and slide-in animation on load */
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+  to {
+    opacity: 1; /* Final opacity */
+  }
+}
+
+/* Slide-in Animation */
+@keyframes slideIn {
+  from {
+    transform: translateY(20px); /* Start 20px below */
+  }
+  to {
+    transform: translateY(0); /* End at original position */
+  }
+}
+
+/* Headings */
+h2 {
+  color: #2c3e50; /* Dark color for headings */
+  margin-bottom: 30px; /* Space below heading */
+  text-align: center; /* Center align heading */
+}
+
+/* Service Container */
+.service-container {
+  display: grid; /* Use grid layout for service cards */
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Responsive grid */
+  gap: 20px; /* Space between cards */
+}
+
+/* Service Card Styles */
+.service-card {
+  background-color: #ffffff; /* White background for cards */
+  padding: 20px; /* Padding inside cards */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Soft shadow */
+  transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s, color 0.3s; /* Smooth transition */
+  cursor: pointer; /* Pointer on hover */
+  position: relative; /* Relative positioning for detail display */
+  overflow: hidden; /* Prevent overflow */
+  opacity: 0; /* Start hidden for fade-in animation */
+  animation: cardFadeIn 0.5s forwards; /* Fade-in animation for cards */
+}
+
+/* Card Fade-in Animation with Up and Down Effect */
+@keyframes cardFadeIn {
+  0% {
+    opacity: 0; /* Start hidden */
+    transform: translateY(10px); /* Start 10px below */
+  }
+  50% {
+    transform: translateY(-10px); /* Move up slightly */
+  }
+  100% {
+    opacity: 1; /* Final opacity */
+    transform: translateY(0); /* End at original position */
+  }
+}
+
+/* Image Style */
+.service-image {
+  width: 100%; /* Full width */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 5px; /* Rounded corners for images */
+  margin-bottom: 15px; /* Space below image */
+}
+
+/* Hover Effects for Service Card */
+.service-card:hover {
+  transform: scale(1.05) translateY(-5px); /* Scale up and lift effect on hover */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Increased shadow on hover */
+  background-color: #95b6d4; /* Light background color on hover */
+  color: #fafbfc; /* Change text color on hover */
+}
+
+/* Service Details */
+.service-details {
+  margin-top: 10px; /* Space above details */
+  animation: slideDown 0.5s; /* Slide down animation for details */
+}
+
+/* Slide Down Animation */
+@keyframes slideDown {
+  from {
+    max-height: 0; /* Start collapsed */
+    opacity: 0; /* Start hidden */
+  }
+  to {
+    max-height: 200px; /* Expand to maximum height */
+    opacity: 1; /* End fully visible */
+  }
+}
+
+/* Button Styles */
+button {
+  padding: 10px 15px; /* Padding inside button */
+  background-color: #3498db; /* Button background */
+  color: white; /* Text color */
+  border: none; /* No border */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Pointer on hover */
+  transition: background-color 0.3s, transform 0.3s; /* Smooth transition */
+}
+
+/* Button Hover Effects */
+button:hover {
+  background-color: #1274b5; /* Darker shade on hover */
+  transform: translateY(-2px); /* Lift effect on button hover */
+}
+
+/* Close Button Styles */
+.service-details button {
+  background-color: #e74c3c; /* Red background for close button */
+}
+
+/* Close Button Hover Effects */
+.service-details button:hover {
+  background-color: #c0392b; /* Darker red on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .services-section {
+    padding: 20px; /* Adjust padding on small screens */
+  }
+
+  .service-card {
+    padding: 15px; /* Less padding on small screens */
+  }
+}
+
+/* Contact Section */
+/* Base styles for the contact section */
+.contact {
+  padding: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+  background: linear-gradient(135deg, #e1f5fe, #b3e5fc); /* Light gradient for the contact page */
+  border-radius: 10px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  opacity: 0; /* Initially hidden */
+  transform: translateY(20px); /* Start slightly lower */
+  animation: fadeInUp 0.8s forwards; /* Apply fade-in and slide-up effect */
+}
+
+/* Fade-in and slide-up animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Heading styles */
+.contact h2 {
+  text-align: center;
+  color: #2c3e50;
+  margin-bottom: 20px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+  opacity: 0; /* Initially hidden */
+  animation: fadeIn 0.5s forwards 0.3s; /* Delayed fade-in */
+}
+
+/* Form styles */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Input fields with animations */
+.form-group input,
+.form-group textarea {
+  padding: 12px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  width: 100%;
+  transition: border-color 0.3s, box-shadow 0.3s;
+  opacity: 0; /* Initially hidden */
+  animation: fadeIn 0.5s forwards; /* Fade-in for inputs */
+}
+
+/* Delayed animation for individual form fields */
+.form-group input:nth-child(1),
+.form-group input:nth-child(2),
+.form-group textarea {
+  animation-delay: 0.5s; /* Delay for the first input */
+}
+
+.form-group input:nth-child(3) {
+  animation-delay: 0.7s; /* Delay for the second input */
+}
+
+/* Submit button styles */
+.form-group button {
+  padding: 12px 20px;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, box-shadow 0.3s ease;
+  opacity: 0; /* Initially hidden */
+  animation: fadeIn 0.5s forwards; /* Fade-in for button */
+}
+
+/* Fade-in animation for button */
+.form-group button {
+  animation-delay: 0.9s; /* Delay for the button */
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #3498db;
+  box-shadow: 0 0 8px rgba(52, 152, 219, 0.4); /* Glowing effect on focus */
+}
+
+/* Fade-in animation keyframes */
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+.contact {
+  display: flex; /* Use flexbox for centering */
+  flex-direction: column; /* Stack children vertically */
+  align-items: center; /* Center horizontally */
+  justify-content: center; /* Center vertically */
+  padding: 40px; /* Padding around the section */
+  max-width: 500px; /* Maximum width for the section */
+  margin: 0 auto; /* Center the section on the page */
+  background: linear-gradient(to right, #9cb6d1, #80bccd);
+  border-radius: 20px; /* Rounded corners */
+  animation: slideIn 0.5s ease forwards; 
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Soft shadow */
+  
+}
+@keyframes slideIn {
+  from {
+    transform: translateY(20px); /* Start from below */
+    opacity: 0; /* Start invisible */
+  }
+  to {
+    transform: translateY(0); /* End at original position */
+    opacity: 1; /* End fully visible */
+  }
+}
+
+/* Form Styles */
+.contact-form {
+  width: 100%; 
+  /* Full width for form */
+  
+}
+
+/* Form Group Styles */
+.form-group {
+  margin-bottom: 20px; /* Space below each input group */
+}
+
+/* Label Styles */
+label {
+  display: block; /* Block display for labels */
+  margin-bottom: 5px; /* Space below label */
+  font-weight: bold; /* Bold font for labels */
+}
+
+/* Input and Textarea Styles */
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%; /* Full width inputs */
+  padding: 10px; /* Padding inside inputs */
+  border: 1px solid #ccc; /* Border color */
+  border-radius: 5px; /* Rounded corners */
+  font-size: 16px; /* Font size */
+  transition: border-color 0.3s; /* Transition for border color */
+}
+
+/* Input Focus Styles */
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+  border-color: #3498db; /* Change border color on focus */
+  outline: none; /* Remove default outline */
+}
+
+/* Button Styles */
+button {
+  padding: 10px 15px; /* Padding inside button */
+  background-color: #3498db; /* Button background */
+  color: white; /* Text color */
+  border: none; /* No border */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Pointer on hover */
+  transition: background-color 0.3s, transform 0.3s; /* Smooth transition */
+}
+
+/* Button Hover Effects */
+button:hover {
+  background-color: #2980b9; /* Darker shade on hover */
+  transform: translateY(-2px); /* Lift effect on button hover */
+}
+
+/* Success Message Styles */
+.success-message {
+  margin-top: 20px; /* Space above message */
+  color: #2ecc71; /* Green color for success message */
+  font-weight: bold; /* Bold text */
+  text-align: center; /* Center align */
+  animation: slideIn 0.5s ease forwards;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .contact-section {
+    padding: 20px; /* Adjust padding on small screens */
+  }
+
+  input[type="text"],
+  input[type="email"],
+  textarea {
+    font-size: 14px; /* Smaller font size on small screens */
+  }
+
+  button {
+    font-size: 14px; /* Smaller font size for buttons */
+  }
+}
+
+
+/* Post Job Section */
+/* Post Job Section */
+.post-job-section {
+  display: flex; /* Use flexbox for centering */
+  flex-direction: column; /* Stack children vertically */
+  align-items: center; /* Center horizontally */
+  justify-content: center; /* Center vertically */
+  padding: 40px; /* Padding around the section */
+  max-width: 600px; /* Maximum width for the section */
+  margin: 0 auto; /* Center the section on the page */
+  background: linear-gradient(to right, #9cb6d1, #80bccd); /* Gradient background */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Soft shadow */
+  opacity: 0; /* Initially hidden for fade-in effect */
+  animation: fadeIn 0.5s ease forwards, slideIn 0.5s ease forwards; /* Sliding in and fade-in animation */
+}
+
+/* Post Job Form */
+.post-job-form {
+  width: 100%; /* Full width */
+  opacity: 0; /* Initially hidden for slide-in effect */
+  animation: slideIn 0.5s ease forwards; /* Slide-in animation for the form */
+}
+
+/* Input and Textarea Styles */
+.post-job-input, .post-job-textarea {
+  width: 100%; /* Full width */
+  padding: 12px; /* Padding inside input */
+  margin: 10px 0; /* Space between inputs */
+  border: 1px solid #ccc; /* Light border */
+  border-radius: 5px; /* Rounded corners */
+  font-size: 16px; /* Font size */
+  transition: border-color 0.3s, box-shadow 0.3s; /* Smooth transition */
+}
+
+/* Focus effect for inputs */
+.post-job-input:focus, .post-job-textarea:focus {
+  border-color: #3498db; /* Change border color on focus */
+  outline: none; /* Remove default outline */
+  box-shadow: 0 0 5px rgba(52, 152, 219, 0.5); /* Glowing effect on focus */
+}
+
+/* Button Styles */
+.post-job-button {
+  padding: 12px; /* Padding inside button */
+  background-color: #3498db; /* Button background */
+  color: white; /* Text color */
+  border: none; /* No border */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Pointer on hover */
+  transition: background-color 0.3s, transform 0.3s; /* Smooth transition */
+}
+
+/* Button Hover Effects */
+.post-job-button:hover {
+  background-color: #2980b9; /* Darker shade on hover */
+  transform: translateY(-2px); /* Lift effect on button hover */
+}
+
+/* Success Message */
+.success-message {
+  margin-top: 10px; /* Space above the success message */
+  color: green; /* Color for the success message */
+  animation: slideIn 0.5s ease forwards; /* Same animation for success message */
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0; /* Start from hidden */
+  }
+  to {
+    opacity: 1; /* Fade to visible */
+  }
+}
+
+/* Slide-in Animation */
+@keyframes slideIn {
+  from {
+    transform: translateY(20px); /* Start from below */
+    opacity: 0; /* Start from hidden */
+  }
+  to {
+    transform: translateY(0); /* Slide to original position */
+    opacity: 1; /* Fade to visible */
+  }
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+  .home-container {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .image-container, .search-box {
+    width: 100%;
+  }
+
+  /* Adjust post-job-section padding for smaller screens */
+  .post-job-section {
+    padding: 10px; /* Less padding for mobile */
+  }
+  .post-job-button {
+    width: 100%; /* Full-width button on mobile */
+  }
+}

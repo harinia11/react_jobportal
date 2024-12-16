@@ -1,0 +1,257 @@
+/* styles.css */
+
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+  }
+  
+  /* Navbar Styles */
+  nav {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+  }
+  
+  nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  nav ul li {
+    margin: 0 15px;
+  }
+  
+  nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 8px 15px;
+    border-radius: 4px;
+    transition: background 0.3s;
+  }
+  
+  nav a:hover {
+    background: #575757;
+  }
+  
+  /* Home Page Styles */
+  h1 {
+    text-align: center;
+    margin: 20px 0;
+  }
+  
+  p {
+    text-align: center;
+    margin: 10px 20px;
+  }
+  
+  /* Job Card Styles */
+  .job-card {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin: 20px;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+  }
+  
+  .job-card:hover {
+    transform: scale(1.05);
+  }
+  
+  .job-card h3 {
+    margin: 10px 0;
+  }
+  
+  button {
+    background: #28a745;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  button:hover {
+    background: #218838;
+  }
+  
+  /* Profile Page Styles */
+  .profile-page {
+    text-align: center;
+    margin: 20px;
+  }
+  
+  /* Form Styles */
+  form {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    margin: 0 auto;
+  }
+  
+  input {
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  button[type="submit"] {
+    background: #007bff;
+  }
+  
+  button[type="submit"]:hover {
+    background: #0056b3;
+  }
+  /* Navbar styles */
+
+/* Basic styling for the navbar */
+.navbar {
+    background-color: #333;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Navigation links (Home, About, Blog, Contact) */
+  .nav-links ul {
+    list-style: none;
+    display: flex;
+  }
+  
+  .nav-links ul li {
+    margin: 0 15px;
+  }
+  
+  .nav-links ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 15px;
+    border-radius: 4px;
+    transition: background 0.3s;
+  }
+  
+  .nav-links ul li a:hover {
+    background-color: #575757;
+  }
+  
+  /* Button styles for 'Post a Job' and 'Want a Job' */
+  .nav-buttons {
+    display: flex;
+  }
+  
+  .nav-buttons .btn {
+    margin-left: 10px;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    text-decoration: none;
+    color: white;
+    background-color: #007bff;
+    transition: background 0.3s;
+  }
+  
+  .nav-buttons .btn:hover {
+    background-color: #0056b3;
+  }
+  
+  .post-job {
+    background-color: #28a745;
+  }
+  
+  .post-job:hover {
+    background-color: #218838;
+  }
+  
+  .want-job {
+    background-color: #ffc107;
+    color: #333;
+  }
+  
+  .want-job:hover {
+    background-color: #e0a800;
+  }
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    background-color: #333;
+    padding: 10px 20px;
+  }
+  
+  .navbar ul {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .navbar ul li {
+    margin: 0 10px;
+  }
+  
+  .navbar ul li button {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+  }
+  
+  .navbar ul li button:hover {
+    background-color: #575757;
+  }
+  
+  .nav-buttons {
+    display: flex;
+  }
+  
+  .nav-buttons button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin-left: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  .nav-buttons button:hover {
+    background-color: #0056b3;
+  }
+  
+  .section {
+    padding: 50px;
+    text-align: center;
+  }
+  
+  #home {
+    background-color: #f4f4f4;
+  }
+  
+  #about {
+    background-color: #ddd;
+  }
+  
+  #contact {
+    background-color: #ccc;
+  }
+  

@@ -1,0 +1,237 @@
+/* Container for the login page */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 20px;
+    background: linear-gradient(to right, #9cb6d1, #80bccd);
+  }
+  
+  .login-box {
+    display: flex;
+    width: 900px;
+    background-color: white;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  
+  /* Left Side (Login Form) */
+  .left-side {
+    width: 50%;
+    padding: 40px;
+    background-color: #f4f4f9;
+  }
+  
+  .left-side h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #555;
+    font-size: 14px;
+  }
+  
+  .form-group input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+  }
+  
+  button {
+    width: 100%;
+    padding: 12px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #2980b9;
+  }
+  
+  .error-message {
+    color: red;
+    font-size: 14px;
+    margin-top: 10px;
+  }
+  
+  /* Right Side (Welcome Message) */
+  .right-side {
+    width: 50%;
+    padding: 40px;
+    background-color: #3498db;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  .right-side h2 {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .right-side p {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .login-box {
+      flex-direction: column;
+    }
+  
+    .left-side, .right-side {
+      width: 100%;
+    }
+  }
+  /* Glitter Effect for the Welcome Message */
+.glitter-effect {
+    display: inline-block; /* Allows inline-block for glitter effect */
+    position: relative;
+    color: #0b0a0a; /* Set your desired text color */
+    font-weight: bold; /* Make the text bold for impact */
+    font-size: 32px; /* Adjust font size as needed */
+    text-shadow: 
+      0 0 5px #ffffff, /* White glow */
+      0 0 10px #ffffff,
+      0 0 20px #ffcc00, /* Gold glow for glitter effect */
+      0 0 30px #ffcc00,
+      0 0 40px #ffcc00; /* Gold glow for glitter effect */
+    animation: glitter 1.5s infinite alternate; /* Animation for glittering effect */
+  }
+  
+  @keyframes glitter {
+    0% {
+      text-shadow: 
+        0 0 5px #ffffff, 
+        0 0 10px #ffffff,
+        0 0 20px #ffcc00,
+        0 0 30px #8fcfe1,
+        0 0 40px #99dddc; /* Initial state */
+    }
+    50% {
+      text-shadow: 
+        0 0 15px #bde3e9, /* Brighter glow at mid-point */
+        0 0 20px #96d9e5,
+        0 0 30px #80cee8,
+        0 0 40px #a4e4ee,
+        0 0 50px #8dc1eb; /* Brightest state */
+    }
+    100% {
+      text-shadow: 
+        0 0 5px #ffffff, 
+        0 0 10px #ffffff,
+        0 0 20px #98d8dd,
+        0 0 30px #9ac8da,
+        0 0 40px #81baca; /* Return to initial state */
+    }
+  }
+  /* Container for the login page */
+.login-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center align items */
+    justify-content: center; /* Center content vertically */
+    height: 100vh; /* Full height of the viewport */
+    background-color: #f0f4f8; /* Light background color */
+  }
+  
+  /* Box for the login form */
+  .login-form {
+    background-color: white; /* White background for the form */
+    padding: 40px; /* Padding inside the box */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    width: 300px; /* Fixed width for the box */
+    transform: translateY(-20px); /* Start slightly above */
+    opacity: 0; /* Start as hidden */
+    animation: slideIn 0.5s forwards; /* Slide-in animation */
+  }
+  
+  /* Slide-in animation */
+  @keyframes slideIn {
+    to {
+      transform: translateY(0); /* End at original position */
+      opacity: 1; /* End fully visible */
+    }
+  }
+  
+  /* Headings */
+  h2 {
+    margin-bottom: 20px; /* Space below the heading */
+    color: #333; /* Dark color for the heading */
+  }
+  
+  /* Form group styles */
+  .form-group {
+    margin-bottom: 15px; /* Space below each form group */
+  }
+  
+  /* Input field styles */
+  input {
+    width: 100%; /* Full width */
+    padding: 10px; /* Padding inside input fields */
+    border: 1px solid #ccc; /* Border color */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 16px; /* Font size */
+    transition: border-color 0.3s; /* Transition for border color */
+  }
+  
+  /* Input focus effect */
+  input:focus {
+    border-color: #3498db; /* Change border color on focus */
+    outline: none; /* Remove default outline */
+  }
+  
+  /* Button styles */
+  button {
+    width: 100%; /* Full width */
+    padding: 10px; /* Padding inside the button */
+    background-color: #3498db; /* Button background color */
+    color: white; /* Text color */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer on hover */
+    font-size: 16px; /* Font size */
+    transition: background-color 0.3s, transform 0.3s; /* Transition for hover effect */
+  }
+  
+  /* Button hover effect */
+  button:hover {
+    background-color: #2980b9; /* Darker shade on hover */
+    transform: translateY(-2px); /* Lift effect on hover */
+  }
+  
+  /* Success message styles */
+  .success-message {
+    margin-top: 15px; /* Space above success message */
+    color: #28a745; /* Green color for success message */
+    font-weight: bold; /* Bold text */
+  }
+  

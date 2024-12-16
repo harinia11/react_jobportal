@@ -1,0 +1,101 @@
+/* General Navbar Styles */
+.navbar {
+  display: flex; /* Use flexbox for layout */
+  justify-content: space-between; /* Space between logo and menu */
+  align-items: center; /* Center items vertically */
+  background-color: #2C3E50; /* Dark background color */
+  padding: 15px 20px;
+  padding: 20px; /* Padding around the navbar */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Deeper shadow for more depth */
+  position: sticky; /* Make navbar sticky */
+  top: 0;
+  flex-wrap: wrap;  /* Stick to top */
+  z-index: 1000; /* Ensure it stays above other content */
+  transition: background-color 0.3s ease; /* Smooth transition for background color */
+}
+
+/* Logo Styles */
+.navbar-logo {
+  font-size: 28px; /* Logo font size */
+  color: #ECF0F1; /* Logo text color */
+  text-decoration: none; /* Remove underline from link */
+  font-weight: bold; /* Bold font for logo */
+  transition: transform 0.3s ease; /* Animation on hover */
+}
+
+.navbar-logo:hover {
+  transform: scale(1.1); /* Slightly enlarge logo on hover */
+}
+
+/* Menu Styles */
+.navbar-menu {
+  list-style: none; /* Remove default list styling */
+  display: flex; /* Use flexbox for menu items */
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+}
+
+.navbar-menu li {
+  margin: 0 20px; /* Space between menu items */
+  position: relative; /* Position for pseudo-elements */
+}
+
+.navbar-menu a {
+  color: #ECF0F1; /* Link color */
+  text-decoration: none; /* Remove underline from links */
+  padding: 10px 15px; /* Padding for links */
+  transition: color 0.3s ease, padding 0.3s ease; /* Transition effects */
+}
+
+/* Hover Effects for Links */
+.navbar-menu a:hover {
+  color: #3498DB; /* Change color on hover */
+  padding-bottom: 5px; /* Add padding for visual effect */
+  border-bottom: 2px solid #3498DB; /* Add border below the link */
+}
+
+/* Button Styles */
+.navbar-buttons {
+  display: flex; /* Align buttons to the right */
+}
+
+.btn-primary {
+  background-color: #3498DB; /* Primary button color */
+  color: #fff; /* Button text color */
+  border: none; /* Remove border */
+  border-radius: 5px; /* Rounded corners */
+  padding: 10px 20px; /* Padding for button */
+  cursor: pointer; /* Pointer cursor */
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Transition for hover effect */
+}
+
+/* Hover Effect for Button */
+.btn-primary:hover {
+  background-color: #2980B9; /* Darker color on hover */
+  transform: translateY(-2px); /* Lift button effect */
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column; /* Stack items vertically on smaller screens */
+  }
+
+  .navbar-menu {
+    flex-direction: column; /* Stack menu items vertically */
+    margin-top: 10px; /* Space above menu */
+  }
+
+  .navbar-menu li {
+    margin: 10px 0; /* Space between vertical menu items */
+  }
+  .navbar a {
+    padding: 10px 0;
+  }
+  .navbar .post-job-button {
+    width: 100%; /* Make button full-width */
+  }
+  .navbar-buttons {
+    margin-top: 10px; /* Space above buttons */
+  }
+}
